@@ -9,10 +9,11 @@ const Button = ({ children, className, ...props }) => <button className={`bg-bla
 
 export default function RetailStore() {
   const productImages = [
-    "https://images.unsplash.com/photo-1583001101371-ec2b9b5f33c4?auto=format&fit=crop&w=300&q=80",
-    "https://images.unsplash.com/photo-1602810316636-df7b1c1b1b1b?auto=format&fit=crop&w=300&q=80",
-    "https://images.unsplash.com/photo-1618354691227-920b4f0c25e5?auto=format&fit=crop&w=300&q=80"
-  ];
+  "https://placehold.co/300x400?text=Product+1",
+  "https://placehold.co/300x400?text=Product+2",
+  "https://placehold.co/300x400?text=Product+3"
+];
+
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -73,13 +74,20 @@ export default function RetailStore() {
         <p>Your cart is currently empty. Start shopping to fill it up!</p>
       </section>
 
-      <div className="fixed bottom-4 right-4">
         <iframe
-          src="https://solnovaai.app.n8n.cloud/webhook/afe2c5ca-83e8-4149-8e38-f3bd57a2776d/chat"
-          title="Chatbot"
-          className="w-72 h-96 rounded-xl shadow-lg border"
-        ></iframe>
-      </div>
+  src="https://solnovaai.app.n8n.cloud/webhook/afe2c5ca-83e8-4149-8e38-f3bd57a2776d/chat"
+  title="AI Chatbot"
+  style={{
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    width: "350px",
+    height: "500px",
+    border: "1px solid #ccc",
+    borderRadius: "8px",
+    zIndex: 9999
+  }}
+/>
     </div>
   );
 }
